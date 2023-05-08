@@ -1,4 +1,7 @@
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
+# hostName = "localhost"
+# hostPort = 8080
 
 
 def print_hi(name):
