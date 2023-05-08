@@ -1,16 +1,19 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from my_server import MyServer
+from http.server import HTTPServer
 
-# hostName = "localhost"
-# hostPort = 8080
-
-
-def print_hi(name):
-
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+hostName = "localhost"
+hostPort = 8080
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    webServer = HTTPServer((hostName, hostPort), MyServer)
+    print("Server started http://%s:%s" % (hostName, hostPort))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    try:
+        webServer.serve_forever()
+    except KeyboardInterrupt:
+        pass
+
+    webServer.server_close()
+    print("Server stopped")
+
