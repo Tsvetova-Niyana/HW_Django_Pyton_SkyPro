@@ -77,8 +77,10 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "skypro_python_django",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
     }
 }
 
@@ -105,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ru-ru"
 
 TIME_ZONE = "UTC"
 
@@ -118,6 +120,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+
+# настройка, по которой будут доступны все медиа файлы, т.е. все файлы, которые загружает пользователь
+MEDIA_URL = "/media/"
+
+# настройка, которая определяет, где физически будут лежать файлы
+# BASE_DIR / "media" - путь, где BASE_DIR - корневая папака, "/" - конкатенация,
+# "media" - название папки(должна существовать)
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
