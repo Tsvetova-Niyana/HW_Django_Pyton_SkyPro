@@ -1,0 +1,23 @@
+команда для запуска shell(django): python manage.py shell
+импорт модели: from main.models import Students
+фильтрация: student_list = Student.objects.filter(is_active=True)
+количество записей: student_list.count() | Student.objects.filter(is_active=True).count()
+существуют ли записи по фильтрации: student_list.exists() | Student.objects.filter(is_active=True).exists()
+запрос фамилий по фильтру в виде списка: Student.objects.filter(is_active=True).values_list('surname', flat=True)
+отобрать записи, кроме указанных в фильтре: student_list = Student.objects.exclude(is_active=True)
+выбрать все записи: student_list = Student.objects.all()
+получение конкретной записи по ключу: student = Student.objects.get(pk=3)
+добавить запись: Student(first_name='Arina', surname='Zaikina').save() |
+                 Student.objects.create(first_name='Dmitriy', surname='Korotaev')
+удаление записи: student = Student.objects.get(pk(можно использовать id)=1) -> student.delete()
+
+Применение фикстур
+
+Команда формирования json файла: python manage.py dumpdata > data.json |
+                      для utf-8: python manage.py dumpdata --indent=2 --exclude auth.permission --exclude contenttypes -o data.json
+
+Команда загрузки данных из json файла: python manage.py loaddata data.json
+
+Команды
+В приложении создать папку/пакет management
+В папке/пакете management создать папку/пакет commands -> создать файл python
