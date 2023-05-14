@@ -1,0 +1,58 @@
+[
+{
+    "category_name": "Рубашки",
+    "description": "test"
+  },
+{
+    "category_name": "Брюки",
+    "description": "test"
+  },
+{
+    "category_name": "Обувь детская",
+    "description": "test"
+  },
+{
+    "category_name": "Обувь мужская",
+    "description": "test"
+  },
+{
+    "category_name": "Обувь женская",
+    "description": "test"
+  },
+{
+    "category_name": "Обувь спортивная",
+    "description": "test"
+  },
+{
+    "category_name": "Обувь ортопедическая",
+    "description": "test"
+  },
+{
+    "category_name": "Ноутбуки и компьютеры",
+    "description": "test"
+  },
+ {
+    "category_name": "Кабели и зарядные устройства",
+    "description": null
+  },
+{
+    "category_name": "Детская электроника",
+    "description": "test"
+  },
+{
+    "category_name": "Детская электроника",
+    "description": null
+  },
+{
+    "category_name": "Гарнитуры и наушники",
+    "description": null
+  },
+{
+    "category_name": "Автоэлектроника и навигация",
+    "description": null
+  },
+{
+    "category_name": "Электроника",
+    "description": null
+  }
+]
