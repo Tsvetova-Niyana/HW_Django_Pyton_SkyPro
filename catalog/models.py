@@ -10,6 +10,7 @@ from django.db import models
 
 NULLABLE = {'null': True, 'blank': True}
 
+
 class Category(models.Model):
     """
         Задание 3
@@ -22,6 +23,7 @@ class Category(models.Model):
 
     category_name = models.CharField(max_length=150, verbose_name='Наименование')
     description = models.TextField(verbose_name='Описание', **NULLABLE)
+
     # created_at = models.DateTimeField(verbose_name='Дата создания', auto_now_add=True, **NULLABLE)
 
     def __str__(self):
@@ -61,6 +63,3 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
-
-
-
