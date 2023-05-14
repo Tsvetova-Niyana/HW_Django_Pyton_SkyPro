@@ -26,6 +26,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('id', 'name_product', 'amount', 'category',)
     list_filter = ('category',)
     search_fields = ('name_product', 'description',)
+    ordering = ('id',)
 
 
 @admin.register(Category)
@@ -36,4 +37,5 @@ class CategoryAdmin(admin.ModelAdmin):
     """
 
     list_display = ('id', 'category_name',)
+    ordering = ('id',)
 
