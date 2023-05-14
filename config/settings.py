@@ -78,7 +78,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "skypro_python_django",
+        "NAME": "skypro_python_django_hw",
         "USER": "postgres",
         "PASSWORD": "postgres",
     }
