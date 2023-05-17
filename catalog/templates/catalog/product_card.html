@@ -1,0 +1,45 @@
+{% extends 'catalog/base.html' %}
+{% load media_path %}
+
+{% block content %}
+<!--<hr class="featurette-divider">-->
+
+<!--<div class="row featurette">-->
+
+
+<div class="col-md-7">
+    <hr width="100%" size="5">
+    <h2 style="padding-top: 20px" class="featurette-heading">{{ product.name_product }}</h2><br>
+    <hr width="100%" size="5">
+    <p style="padding-left: 20px" class="lead"><b>Категория: </b>{{product.category}}</p>
+    <p style="padding-left: 20px" class="lead"><b>Цена: </b>{{product.amount}} руб.</p>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <p class="lead"><b>Описание</b></p>
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                 data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p class="lead">{{product.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <p class="lead" style="font-size: 14px;padding-left: 20px">Дата создания: {{ product.create_at }}</p>
+    <p class="lead" style="font-size: 14px;padding-left: 20px">Дата последнего обновления: {{ product.last_update }}
+        г.</p>
+    <br>
+    <a href="{% url 'catalog:home' %}" class="btn btn-outline-primary"> <- Назад </a>
+</div>
+<div class="col-md-5">
+    <img style="padding-top: 20px" align="right" src="{% media_path product.img_product %}" width="400" height="500">
+</div>
+
+
+{% endblock %}
