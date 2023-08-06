@@ -8,7 +8,10 @@
                     <a class="navbar-brand" href="/">{{ title }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'catalog:home' %}">Каталог</a>
+                    <a class="nav-link" href="{% url 'catalog:catalog_list' %}">Каталог</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blogs:list' %}">Блог</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'catalog:contacts' %}">Контакты</a>

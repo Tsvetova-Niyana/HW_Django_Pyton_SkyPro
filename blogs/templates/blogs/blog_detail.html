@@ -1,0 +1,21 @@
+{% extends 'blogs/base.html' %}
+<!--{% load b_media_path %}-->
+
+{% block content %}
+
+
+
+<img style="padding-top: 20px" align="right" src="{% b_media_path object.img_blog %}" width="250" height="250">
+<div class="col-md-7">
+    <hr width="100%" size="5">
+    <h2 style="padding-top: 20px" class="featurette-heading">{{ object.title }} || {{ object.slug }}</h2><br>
+    <hr width="100%" size="5">
+    <p style="padding-left: 20px" class="lead"><b>Описание: </b>{{object.description}}</p>
+    <p style="padding-left: 20px" class="lead"><b>Создана: </b>{{object.create_at}}</p>
+    <p style="padding-left: 20px" class="lead"><b>Просмотры: </b>{{object.view_count}}</p>
+
+</div>
+<a href="{% url 'blogs:list' %}" class="btn btn-sm btn-outline-secondary">Назад</a>
+</div>
+
+{% endblock %}

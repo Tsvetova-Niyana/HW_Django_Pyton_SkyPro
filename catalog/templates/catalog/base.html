@@ -1,5 +1,5 @@
 {% load static %}
-<!doctype html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -32,8 +32,10 @@
 {% include 'catalog/includes/inc_catalog_menu.html' %}
 </header>
 <main>
+
     <div class="container marketing">
         <div class="row">
+
             {% block content %}
             {% endblock %}
         </div>
