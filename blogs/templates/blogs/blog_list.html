@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="mb-3">
-        <a href="" class="btn btn-success">Добавить запись</a>
+        <a href="{% url 'blogs:create' %}" class="btn btn-success">Добавить запись</a>
 </div>
 {% for object in object_list %}
         {% include 'blogs/includes/inc_article_card.html' %}

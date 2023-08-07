@@ -11,15 +11,15 @@
           <p class="card-text mb-auto">{{ object.description }}</p>
 
           <div class="btn-group">
-              <a href="{% url 'blogs:view' object.pk %}" class="btn btn-sm btn-outline-secondary">Просмотр</a>
-              <a href="" type="button" class="btn btn-sm btn-outline-secondary">Редактировать</a>
-              <a href="" type="button" class="btn btn-sm btn-outline-danger">Удалить</a>
+              <a href="{% url 'blogs:view' object.pk %}" class="btn btn-sm btn-outline-primary">Просмотр</a>
+              <a href="{% url 'blogs:update' object.pk %}" type="button" class="btn btn-sm btn-outline-success">Редактировать</a>
+              <a href="{% url 'blogs:delete' object.pk %}" type="button" class="btn btn-sm btn-outline-danger">Удалить</a>
           </div>
 
 
         </div>
         <div class="col-auto d-none d-lg-block">
-          <img class="rounded-circle" width="200" height="140" src="/media/{{ object.img_blog }}">
+          <img class="rounded-circle" width="200" height="140" src="{% b_media_path object.img_blog %}">
 
         </div>
 
