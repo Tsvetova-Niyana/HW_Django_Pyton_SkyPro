@@ -25,6 +25,7 @@ class BlogDetailView(DetailView):
         return self.object
 
 
+
 class BlogCreateView(CreateView):
     model = Blog
     fields = ('title', 'description', 'img_blog',)
